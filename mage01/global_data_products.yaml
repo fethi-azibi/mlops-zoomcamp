@@ -1,0 +1,7 @@
+training:
+  object_type: pipeline
+  object_uuid: data_preparation
+  outdated_after:
+    seconds: 600
+  settings:
+    build: {}
