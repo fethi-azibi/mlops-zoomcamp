@@ -74,5 +74,5 @@ variables:
   split_on_feature: lpep_pickup_datetime
   split_on_feature_value: '2024-02-01'
   target: duration
-variables_dir: C:\Users\LENOVO\.mage_data\mage01
+variables_dir: /home/codespace/.mage_data/mage01
 widgets: []

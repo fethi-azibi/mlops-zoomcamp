@@ -20,7 +20,6 @@ def train(
     ],
     **kwargs,
 ) -> Tuple[BaseEstimator, Dict[str, str]]:
-    print(settings)
     hyperparameters, X, y, model_info = settings
 
     model_class = model_info['cls']

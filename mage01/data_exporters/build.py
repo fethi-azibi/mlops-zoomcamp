@@ -51,8 +51,8 @@ def export(
     y_train_path= save_to_artifacts(y_train, "y_train.pkl")
     y_val_path= save_to_artifacts(y_val, "y_val.pkl")
     dv_path= save_to_artifacts(dv, "dv.pkl")
-    # return [X, X_train, X_val, y, y_train, y_val, dv,]
-    return [X_path,X_train_path, X_val_path, y_path, y_train_path, y_val_path, dv_path,]
+    return X, X_train, X_val, y, y_train, y_val, dv
+    # return [X_path,X_train_path, X_val_path, y_path, y_train_path, y_val_path, dv_path,]
 
 
 # @test

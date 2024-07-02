@@ -44,15 +44,16 @@ blocks:
   language: python
   name: load_models
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks: []
   uuid: load_models
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - sklearn
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -66,6 +67,22 @@ blocks:
   - load_models
   - training_set
   uuid: hyperparameters/sklearn_py
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sklearn
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hyperparameters/sklearn_py
+  uuid: sklearn
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -91,5 +108,5 @@ uuid: sklearn_training
 variables:
   max_evaluations: 10
   random_state: 42
-variables_dir: C:\Users\LENOVO\.mage_data\mage01
+variables_dir: /home/codespace/.mage_data/mage01
 widgets: []
