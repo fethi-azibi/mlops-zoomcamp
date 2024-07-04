@@ -6,6 +6,7 @@ blocks:
       uuid: training
   downstream_blocks:
   - hyperparameters/xgboost
+  - xgboost
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -20,7 +21,9 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - xgboost
+  - dashboard_data_source
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -33,6 +36,41 @@ blocks:
   upstream_blocks:
   - training_dataset
   uuid: hyperparameters/xgboost
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - dashboard_data_source
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: xgboost
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hyperparameters/xgboost
+  - training_dataset
+  uuid: xgboost
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: dashboard_data_source
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - xgboost
+  - hyperparameters/xgboost
+  uuid: dashboard_data_source
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -55,5 +93,7 @@ spark_config: {}
 tags: []
 type: python
 uuid: xgboost_training
+variables:
+  max_depth: 5
 variables_dir: /home/codespace/.mage_data/mage01
 widgets: []
