@@ -13,12 +13,12 @@ blocks:
   language: python
   name: training_dataset
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: global_data_product
   upstream_blocks: []
   uuid: training_dataset
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -36,7 +36,7 @@ blocks:
   upstream_blocks:
   - training_dataset
   uuid: hyperparameters/xgboost
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -54,7 +54,7 @@ blocks:
   - hyperparameters/xgboost
   - training_dataset
   uuid: xgboost
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: pink
   configuration: {}
   downstream_blocks: []

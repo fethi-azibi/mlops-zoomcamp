@@ -5,3 +5,11 @@ training:
     seconds: 600
   settings:
     build: {}
+xgboost_training:
+  object_type: pipeline
+  object_uuid: xgboost_training
+  outdated_after:
+    seconds: 6001
+  repo_path: /workspaces/mlops-zoomcamp/mage01
+  settings:
+    xgboost: {}
