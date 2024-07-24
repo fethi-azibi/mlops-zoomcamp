@@ -1,0 +1,7 @@
+project_uuid: 66f80777951f468ab134b22facf51b57
+features:
+  command_center: true
+  add_new_block_v2: true
+  dbt_v2: false
+help_improve_mage:
+pipelines:
